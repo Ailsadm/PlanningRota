@@ -7,12 +7,13 @@ import { inter } from "@/app/Fonts/fonts";
 interface TextInputProps {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   value?: string;
+  placeholder?: string;
 }
 
 
- export default function TextInput({onChange, value}: TextInputProps) {
+ export default function TextInput({onChange, value, placeholder}: TextInputProps) {
  
     return (
-      <StyledInput onChange={onChange} value={value}/>
+      <StyledInput onChange={onChange} value={value} placeholder={placeholder}/>
     );
   }
